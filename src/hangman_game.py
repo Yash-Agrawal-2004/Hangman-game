@@ -88,6 +88,15 @@ def restart_game():
     message_label.config(text="")
     entry.delete(0, tk.END)
 
+    # Reset hangman image
+    canvas.itemconfigure(head_id, state="hidden")
+    canvas.itemconfigure(head1_id, state="hidden")
+    canvas.itemconfigure(body_id, state="hidden")
+    canvas.itemconfigure(left_arm_id, state="hidden")
+    canvas.itemconfigure(right_arm_id, state="hidden")
+    canvas.itemconfigure(left_leg_id, state="hidden")
+    canvas.itemconfigure(right_leg_id, state="hidden")
+
     # Restore button
     guess_btn.configure(text="Guess", command=check_guess)
 
@@ -170,40 +179,40 @@ canvas = tk.Canvas(
 )
 
 
-gallows = tk.PhotoImage(file="hangman0.png")
-head = tk.PhotoImage(file="hangman1.png")
-head1 = tk.PhotoImage(file="hangman11.png")
-body = tk.PhotoImage(file="hangman2.png")
-left_arm = tk.PhotoImage(file="hangman4.png")
-right_arm = tk.PhotoImage(file="hangman3.png")
-left_leg = tk.PhotoImage(file="hangman5.png")
-right_leg = tk.PhotoImage(file="hangman6.png")
+gallows = tk.PhotoImage(file="../assets/hangman0.png")
+head = tk.PhotoImage(file="../assets/hangman1.png")
+head1 = tk.PhotoImage(file="../assets/hangman11.png")
+body = tk.PhotoImage(file="../assets/hangman2.png")
+left_arm = tk.PhotoImage(file="../assets/hangman4.png")
+right_arm = tk.PhotoImage(file="../assets/hangman3.png")
+left_leg = tk.PhotoImage(file="../assets/hangman5.png")
+right_leg = tk.PhotoImage(file="../assets/hangman6.png")
 
-head = Image.open("hangman1.png")
+head = Image.open("../assets/hangman1.png")
 head = head.resize((190, 90))
 head = ImageTk.PhotoImage(head)
 
-head1 = Image.open("hangman11.png")
+head1 = Image.open("../assets/hangman11.png")
 head1 = head1.resize((30, 15))
 head1 = ImageTk.PhotoImage(head1)
 
-body = Image.open("hangman2.png")
+body = Image.open("../assets/hangman2.png")
 body = body.resize((230, 230))
 body = ImageTk.PhotoImage(body)
 
-left_arm= Image.open("hangman4.png")
+left_arm= Image.open("../assets/hangman4.png")
 left_arm = left_arm.resize((175, 180))
 left_arm = ImageTk.PhotoImage(left_arm)
 
-right_arm = Image.open("hangman3.png")
+right_arm = Image.open("../assets/hangman3.png")
 right_arm = right_arm.resize((180, 180))
 right_arm = ImageTk.PhotoImage(right_arm)
 
-left_leg = Image.open("hangman5.png")
+left_leg = Image.open("../assets/hangman5.png")
 left_leg = left_leg.resize((200, 270))
 left_leg = ImageTk.PhotoImage(left_leg)
 
-right_leg = Image.open("hangman6.png")
+right_leg = Image.open("../assets/hangman6.png")
 right_leg = right_leg.resize((180, 256))
 right_leg = ImageTk.PhotoImage(right_leg)
 
