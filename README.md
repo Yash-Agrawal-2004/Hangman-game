@@ -33,35 +33,43 @@ The current version uses an **Education-themed** word category containing words 
 
 ## 📷 Screenshots
 
-### Gameplay Screens
+### Starting Screen
 
-Add screenshots of the running application here. These should show the main game interface, different hangman stages, the winning screen, and the losing/replay state.
+![Starting Screen](screenshots/starting_screen.PNG)
 
-Example:
+### Mid-Game Screen
 
-```markdown
-![Gameplay Screenshot](screenshots/gameplay.png)
-```
+![Mid-Game Screen](screenshots/mid_game_screen.PNG)
+
+### Winner Screen
+
+![Winner Screen](screenshots/winner_screen.PNG)
+
+### Lose Screen
+
+![Lose Screen](screenshots/lose_screen.PNG)
+
+The screenshots above show the main gameplay flow, from starting a new round through active gameplay to winning and losing states.
 
 ### Game Artwork
 
 The project includes individual PNG assets that are combined to create the progressive Hangman drawing.
 
-![Gallows](hangman0.png)
+![Gallows](assets/hangman0.png)
 
-![Head](hangman1.png)
+![Head](assets/hangman1.png)
 
-![Body](hangman2.png)
+![Body](assets/hangman2.png)
 
-![Right Arm](hangman3.png)
+![Right Arm](assets/hangman3.png)
 
-![Left Arm](hangman4.png)
+![Left Arm](assets/hangman4.png)
 
-![Left Leg](hangman5.png)
+![Left Leg](assets/hangman5.png)
 
-![Right Leg](hangman6.png)
+![Right Leg](assets/hangman6.png)
 
-![Additional Head Detail](hangman11.png)
+![Additional Head Detail](assets/hangman11.png)
 
 ## 📋 Requirements
 
@@ -104,11 +112,13 @@ pip install -r requirements.txt
 
 ### 4. Run the game
 
+From the project root:
+
 ```bash
-python "hangman game.py"
+python src/hangman_game.py
 ```
 
-> Keep the PNG artwork files in the same project directory as the Python file, because the game loads the assets by filename.
+> The game source is located in `src/`, while the Hangman artwork is stored in `assets/`.
 
 ## 🎮 How to Play
 
@@ -189,20 +199,29 @@ The word list contains terms related to areas such as:
 ```text
 Hangman-game/
 │
-├── hangman game.py      # Main Python game source code
+├── assets/
+│   ├── hangman0.png         # Gallows artwork
+│   ├── hangman1.png         # Head artwork
+│   ├── hangman11.png        # Additional head detail
+│   ├── hangman2.png         # Body artwork
+│   ├── hangman3.png         # Right arm artwork
+│   ├── hangman4.png         # Left arm artwork
+│   ├── hangman5.png         # Left leg artwork
+│   └── hangman6.png         # Right leg artwork
 │
-├── hangman0.png         # Gallows artwork
-├── hangman1.png         # Head artwork
-├── hangman11.png        # Additional head detail
-├── hangman2.png         # Body artwork
-├── hangman3.png         # Right arm artwork
-├── hangman4.png         # Left arm artwork
-├── hangman5.png         # Left leg artwork
-├── hangman6.png         # Right leg artwork
+├── screenshots/
+│   ├── starting_screen.PNG  # Initial game screen
+│   ├── mid_game_screen.PNG  # Active gameplay
+│   ├── winner_screen.PNG    # Winning state
+│   └── lose_screen.PNG      # Losing state
 │
-├── requirements.txt     # Python dependencies
-├── README.md            # Project documentation
-└── LICENSE              # Project license
+├── src/
+│   └── hangman_game.py      # Main Python game source code
+│
+├── .gitignore               # Git ignore rules
+├── requirements.txt         # Python dependencies
+├── README.md                # Project documentation
+└── LICENSE                  # Project license
 ```
 
 ## 🔮 Future Improvements
